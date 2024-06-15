@@ -1,3 +1,8 @@
+class UserData:
+    EMAIL = 'Ivanbelov_diplom@gmail.com'
+    PASSWORD = 'Onlyforyoumyfriend'
+
+
 class Urls:
     MAIN_PAGE = 'https://stellarburgers.nomoreparties.site/'
     ORDERS_PAGE = 'https://stellarburgers.nomoreparties.site/feed'
@@ -8,7 +13,3 @@ class Urls:
     PERSONAL_ACCOUNT_PAGE = 'https://stellarburgers.nomoreparties.site/account/profile'
     PERSONAL_ACCOUNT_HISTORY_PAGE = 'https://stellarburgers.nomoreparties.site/account/order-history'
     ORDER_LIST_PAGE = 'https://stellarburgers.nomoreparties.site/feed'
-
-class UserData:
-    EMAIL = 'Ivanbelov_diplom@gmail.com'
-    PASSWORD = 'Onlyforyoumyfriend'

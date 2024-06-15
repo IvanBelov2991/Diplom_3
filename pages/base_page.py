@@ -19,8 +19,7 @@ class BasePage:
     @allure.step('Дождаться отображения элемента')
     def is_element_visible(self, locator):
         try:
-            element = WebDriverWait(self.driver, 10).until(
-                expected_conditions.visibility_of_element_located(locator))
+            element = self.wait_and_find_element(locator)
             return element.is_displayed()
         except NoSuchElementException:
             return False
@@ -28,7 +27,7 @@ class BasePage:
     @allure.step('Дождаться, что элемент исчезнет со страницы')
     def is_element_not_visible(self, locator):
         try:
-            WebDriverWait(self.driver, 10).until(expected_conditions.invisibility_of_element_located(locator))
+            self.wait_and_find_element(locator)
             return True
         except TimeoutException:
             return False
@@ -92,8 +91,7 @@ class BasePage:
     @allure.step('Ожидание отображения элемента')
     def get_visible_element(self, locator):
         try:
-            element = WebDriverWait(self.driver, 10).until(
-                expected_conditions.visibility_of_element_located(locator))
+            element = self.wait_and_find_element(locator)
             return element
         except NoSuchElementException:
             return None
